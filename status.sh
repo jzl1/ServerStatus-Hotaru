@@ -99,7 +99,7 @@ Download_Server_Status_server(){
 }
 Download_Server_Status_client(){
 	cd "/tmp"
-	wget -N --no-check-certificate "https://raw.githubusercontent.com/CokeMine/ServerStatus-Hotaru/master/clients/status-client.py"
+	wget -N --no-check-certificate -O status-client.py "https://raw.githubusercontent.com/Rhilip/ServerStatus/master/client-linux.py"
 	[[ ! -e "status-client.py" ]] && echo -e "${Error} ServerStatus 客户端下载失败 !" && exit 1
 	cd "${file_1}"
 	[[ ! -e "${file}" ]] && mkdir "${file}"
